@@ -8,7 +8,7 @@ from .models import Mascota
 
 class RegistrarMascota(LoginRequiredMixin, CreateView):
 	model = Mascota
-	#template_name=''
+	template_name='pages/RegistroAnimalBasico.html'
 	success_url = reverse_lazy("mascotas:listar")
 	fields = ('imagen','nombre','edad','especie','raza','sexo','info_medica','veterinaria','dir_veterinaria')
 

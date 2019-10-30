@@ -5,11 +5,15 @@ from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, UpdateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 # Create your views here.
+
 from .models import CustomUser
+from .forms import CustomUserCreationForm
 
 class Registrarte(CreateView):
 	model = CustomUser
-	fields =('name','lastname','email','username','residence','password')
-	template_name='us/pages/RegistroPersona.html'
+	form_class=CustomUserCreationForm
+	template_name='pages/RegistroPersona.html'
 	success_url = reverse_lazy("mascotas:listar")
-	
+	def form_invalid(self, form):
+		
+		return self.render_to_response(self.get_context_data(form=form))

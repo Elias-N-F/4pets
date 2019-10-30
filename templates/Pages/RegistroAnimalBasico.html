@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
+{%load static%}
 <head>
+
     <!-- Required meta tags-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -15,15 +16,15 @@
 
     <!-- Icons font CSS-->
     
-    <link ref="stylesheet" href="../Css/fontello.css">
-    <link href="../vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
-    <link href="../vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
-    <link rel="stylesheet" href="../Css/boostrap/bootstrap.min.css"></link>
+    <link ref="stylesheet" href="{% static "/Css/fontello.css" %}">
+    <link href="{% static "/vendor/mdi-font/css/material-design-iconic-font.min.css" %}" rel="stylesheet" media="all">
+    <link href="{% static "/vendor/font-awesome-4.7/css/font-awesome.min.css" %}" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="{% static "/Css/boostrap/bootstrap.min.css" %}"></link>
 
     <!-- Script -->
-    <script src="../Js/jquery.js"></script>
+    <script src="{% static "/Js/jquery.js" %}"></script>
 
-    <script src="../Js/boostrap/bootstrap.min.js"></script>
+    <script src="{% static "/Js/boostrap/bootstrap.min.js" %}"></script>
     <!-- Bootstrap tooltips -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
     <!-- MDB core JavaScript -->
@@ -36,22 +37,22 @@
     <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
 
     <!-- Vendor CSS-->
-    <link href="../vendor/select2/select2.min.css" rel="stylesheet" media="all">
-    <link href="../vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+    <link href="{% static "/vendor/select2/select2.min.css" %}" rel="stylesheet" media="all">
+    <link href="{% static "/vendor/datepicker/daterangepicker.css" %}" rel="stylesheet" media="all">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/css/mdb.min.css" rel="stylesheet">
 
     <!-- Main CSS-->
-    <link href="../Css/RegistroAnimalBasico.css" rel="stylesheet" media="all">
-    <link href="../Css/style.css" rel="stylesheet">
+    <link href="{% static "/Css/RegistroAnimalBasico.css" %}" rel="stylesheet" media="all">
+    <link href="{% static "/Css/style.css" %}" rel="stylesheet">
 </head>
 
 <body>
         <!-- NAVBAR -->
         <nav class="navbar navbar-expand-lg navbar-dark header" id="navbar">
-            <img src="../Img/Logo4PetsB.png" width="45" height="60" class="rounded" alt="Cinque Terre">
+            <img src="{% static "/Img/Logo4PetsB.png" %}" width="45" height="60" class="rounded" alt="Cinque Terre">
             <a class="navbar-brand" href="#">4Pets</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -87,7 +88,7 @@
                       </div>
                       <div class="centrar">
                       <div class="media" >
-                        <img class="centrarimg" src="../Img/huellastitulo.png" width="37" height="42" class="rounded" alt="Cinque Terre">
+                        <img class="centrarimg" src="{% static "/Img/huellastitulo.png" %}" width="37" height="42" class="rounded" alt="Cinque Terre">
                       <div class="media-body centrar">
                         <h1>¡Registra tu mascota!</h1>
                       </div>
@@ -167,7 +168,7 @@
       <div class="row">
         <div class="col-md-3 footer-brand animated fadeInLeft">
             <div class="media">
-              <img src="../Img/Logo4PetsB.png" width="80" height="100" class="rounded" alt="Cinque Terre">
+              <img src="{% static "/Img/Logo4PetsB.png" %}" width="80" height="100" class="rounded" alt="Cinque Terre">
               <div class="media-body"><h2>4Pets</h2></div>
             </div>
             <div class="row">
@@ -205,14 +206,14 @@
 
 
     <!-- Jquery JS-->
-    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="{% static "/vendor/jquery/jquery.min.js" %}"></script>
     <!-- Vendor JS-->
-    <script src="../vendor/select2/select2.min.js"></script>
-    <script src="../vendor/datepicker/moment.min.js"></script>
-    <script src="../vendor/datepicker/daterangepicker.js"></script>
+    <script src="{% static "/vendor/select2/select2.min.js" %}"></script>
+    <script src="{% static "/vendor/datepicker/moment.min.js" %}"></script>
+    <script src="{% static "/vendor/datepicker/daterangepicker.js" %}"></script>
 
     <!-- Main JS-->
-    <script src="../Js/global.js"></script>
+    <script src="{% static "/Js/global.js" %}"></script>
 
 </body>
 
