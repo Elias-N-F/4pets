@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
+    <!-- Bootstrap core CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Material Design Bootstrap -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/css/mdb.min.css"
+      rel="stylesheet"
+    />
+    <meta charset="utf-8" />
+    <!-- JQuery -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+    ></script>
+    <!-- Bootstrap tooltips -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"
+    ></script>
+    <!-- Bootstrap core JavaScript -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"
+    ></script>
+    <!-- MDB core JavaScript -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/js/mdb.min.js"
+    ></script>
+    <title></title>
+  </head>
+  <body>
+    {% block navbar %}
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark header">
+      <img
+        src="Img/Logo4PetsB.png"
+        width="45"
+        height="60"
+        class="rounded"
+        alt="Cinque Terre"
+      />
+      <a class="navbar-brand" href="#">4Pets</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarColor01"
+        aria-controls="navbarColor01"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >Inicio <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Mascotas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">O.N.G.</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sobre Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Eventos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Preguntas Frecuentes</a>
+          </li>
+        </ul>
+        <a text-align="left" class="nav-link" href="#">Inicio Sesion</a>
+        <button type="button" class="btn btn-primary">Registrame</button>
+      </div>
+    </nav>
+    {% endblock %}
+
+    {% block footer %}
+    <footer class="footer-bs rounded mb-0 footer">
+        <div class="row">
+          <div class="col-md-3 footer-brand animated fadeInLeft">
+              <div class="media">
+                <img src="Img/Logo4PetsB.png" width="80" height="100" class="rounded" alt="Cinque Terre">
+                <div class="media-body"><h2>4Pets</h2></div>
+              </div>
+              <div class="row">
+                  <p>©Copyright © 2019 Todos los derechos reservados</p>
+              </div>
+            </div>
+          <div class="col-md-1 footer-nav animated fadeInUp">
+            <size><strong>Nuestras Redes</strong></size>
+              <ul>
+                  <li><a href="#">Facebook</a></li>
+                  <li><a href="#">Twitter</a></li>
+                  <li><a href="#">Instagram</a></li>
+                  <li><a href="#">Google+</a></li>
+                </ul>
+            </div>
+          <div class="col-md-2 footer-social animated fadeInDown"><size=2><strong>Contacto:</strong> <br> </size> <SIZE>+54362-4547608 </SIZE></div>
+          <div class="col-md-2 footer-social animated fadeInDown"><size=2><strong>E-mail:</strong> <br> </size> <size>Burich-1995@gmail.com</size></div>
+          <div class="col-md-2 footer-social animated fadeInDown"><size=2><strong>Ubicación</strong> <br> </size> <size>Resistencia, Chaco</size></div>
+
+          <div class="col-md-2 footer-ns animated fadeInRight">
+            <size=2><strong>Páginas</strong></size>
+              <ul>
+                <li><a href="#">Registrarme</a></li>
+                <li><a href="#">Sobre Nosotros</a></li>
+                <li><a href="#">Extraviados</a></li>
+                <li><a href="#">Eventos</a></li>
+              </ul>
+            </div>
+        </div>
+    </footer>
+
+    {% endblock %}
+  </body>
+</html>

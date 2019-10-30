@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Css/style.css">
+    <link ref="stylesheet" href="Css/fontello.css">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>4Pets - Para las Mascotas</title>
+    <meta name="description" content="En ayuda a las nuestras mascotas querida">
+    <meta name="keywords" content="ayuda, mascotas, registro, adopcion, ONGs, perdidos, extraviados, perros">
+    <meta name="author" content="4Pets">
+    <link rel="stylesheet" href="Css/boostrap/bootstrap.min.css"></link>
+    <script src="Js/jquery.js"></script>
+    <script src="Js/Registro.js"></script>
+    <script src="Js/boostrap/bootstrap.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/js/mdb.min.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/css/mdb.min.css" rel="stylesheet">
+</head>
+
+<body>
+      <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark header">
+        <img src="Img/Logo4PetsB.png" width="45" height="60" class="rounded" alt="Cinque Terre">
+        <a class="navbar-brand" href="#">4Pets</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor01">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Mascotas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">O.N.G.</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sobre Nosotros</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Eventos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Preguntas Frecuentes</a>
+            </li>
+          </ul>
+          <a text-align="left" class="nav-link"  href="#">Inicio Sesion</a>
+          <button type="button" class="btn btn-primary">Registrame</button>
+
+        </div>
+    </nav>
+
+    <!-- BREADCRUMB -->
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb" style="margin:0px">
+        <li class="breadcrumb-item active" aria-current="page">Inicio</li>
+        <li class="breadcrumb-item active" aria-current="page">Registrarme</li>
+      </ol>
+    </nav>
+
+
+      <!-- Un fix para el mal diseño -->
+      <div class="topnav"></div>
+      <!-- CONTENIDO -->
+      <div class="container-fluid text-center body col-md-auto">
+        <div class="content">
+              <div class="row backgroundcard">
+                <div class=".col-6 .col-lg-4 hero">
+                    <div class="card" width="100%" height="100%" >
+                        <img class="card-img-top ImagenR" src="./Img/Animals.jpg" alt="Card image cap">
+                    </div>
+                      <!-- <img class="slogan" src="./Img/Slogan.png" width="110" height="80" class="rounded" alt="Cinque Terre">
+                      <img class="back" src="./Img/Animals.jpg" alt=""> -->
+                </div>
+
+
+                <div class="col-12 col-sm-6 col-lg-8 text-left register">
+                  <div class="col-12 col-md-auto">
+
+                    <div class="media" >
+                      <img class="margen" src="Img/logo.png" width="37" height="42" class="rounded" alt="Cinque Terre">
+                      <div class="media-body">
+                          <h1 class=".flipInY">¡Registrarse gratis en 4Pets!</h1>
+                      </div>
+                    </div>
+                  </div>
+                      <form>
+                          <div class="row align-items-center">
+                          </div>
+                          <div class="row align-items-center">
+                              <div class="col-sm-6">
+                                  <label for="validationTooltip01" class="col-form-label">Nombre:</label>
+                                  <input type="text" class="form-control" placeholder="Ingrese su Nombre Aquí" required>
+                                  <label for="em1" class="col-form-label">E-mail:</label>
+                                <input type="email" class="form-control" id="em1" placeholder="Ingrese su E-mail Aquí" > <span class="icon-down-open"></span>
+                                <h6 class="margen2">Sexo:</h6>
+                                <select class="browser-default custom-select margen2">
+                                  <option selected>Seleccione un sexo</option>
+                                  <option value="1">Femenino</option>
+                                  <option value="2">Masculino</option>
+                                  <option value="3">Otros</option>
+                                </select>
+                                <div class="form-group">
+                                    <label for="pass1 margen2">Contraseña:</label>
+                                    <input type="password" class="form-control" id="pass1" placeholder="Ingrese su contraseña">
+                                </div>
+
+                              </div>
+                              <div class="col-sm-6">
+                                  <label for="em1" class="col-form-label">Apellido:</label>
+                                  <input type="text" class="form-control" placeholder="Ingrese su Apellido Aquí">
+                                  <label for="em2" class="col-form-label">Repetir E-mail:</label>
+                                  <input type="email" class="form-control" id="em2" placeholder="Repita su E-mail Aquí">
+                                  <h6 class="margen2">Provincia:</h6>
+                                  <select class="browser-default custom-select margen2">
+                                    <option selected>Seleccione una provincia de la lista</option>
+                                    <option value="1">Chaco</option>
+                                    <option value="2">Corrientes</option>
+                                    <option value="3">Formosa</option>
+                                    <option value="3">Misiones  </option>
+                                  </select>
+                                  <div class="form-group">
+                                      <label for="pass2 margen2">Repetir contraseña:</label>
+                                      <input type="password" class="form-control" id="pass2" placeholder="Repita su contraseña">
+                                    </div>
+                              </div>
+                              <button type="submit" class="btn btn-light ml-auto aqua-gradient">Registrarme</button>
+                          </div>
+                      </form>
+                  </div>
+
+
+              </div>
+        </div>
+
+        <!-- FOOTER -->
+          <footer class="footer-bs rounded mb-0 footer">
+              <div class="row">
+                <div class="col-md-3 footer-brand animated fadeInLeft">
+                    <div class="media">
+                      <img src="Img/Logo4PetsB.png" width="80" height="100" class="rounded" alt="Cinque Terre">
+                      <div class="media-body"><h2>4Pets</h2></div>
+                    </div>
+                    <div class="row">
+                        <p>©Copyright © 2019 Todos los derechos reservados</p>
+                    </div>
+                  </div>
+                <div class="col-md-1 footer-nav animated fadeInUp">
+                  <size=2><strong>Nuestras Redes</strong></size>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Google+</a></li>
+                      </ul>
+                  </div>
+                <div class="col-md-2 footer-social animated fadeInDown"><size=2><strong>Contacto:</strong> <br> </size> <SIZE=3>+54362-4547608 </SIZE></div>
+                <div class="col-md-2 footer-social animated fadeInDown"><size=2><strong>E-mail:</strong> <br> </size> </size>Burich-1995@gmail.com</size></div>
+                <div class="col-md-2 footer-social animated fadeInDown"><size=2><strong>Ubicación</strong> <br> </size> </size>Resistencia, Chaco</size></div>
+
+                <div class="col-md-2 footer-ns animated fadeInRight">
+                  <size=2><strong>Páginas</strong></size>
+                    <ul>
+                      <li><a href="#">Registrarme</a></li>
+                      <li><a href="#">Sobre Nosotros</a></li>
+                      <li><a href="#">Extraviados</a></li>
+                      <li><a href="#">Eventos</a></li>
+                    </ul>
+                  </div>
+              </div>
+          </footer>
+
+          <!-- CIERRE -->
+          <section style="text-align:center;"><span>Diseñado por <a href="#">UpPiGo</a></span></section>
+      </div>
+
+</body>
+</html>
