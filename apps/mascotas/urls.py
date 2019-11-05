@@ -10,6 +10,8 @@ urlpatterns = [
 	
 	path("nuevo/", views.RegistrarMascota.as_view(), name="newMascota"), 
 
+	#path("nuevo2/<object:form>", views.RegistrarParte2, name="newMascota"), 
+
 	path("modificar/", views.ActualizarMascota.as_view(), name="updateMascota")
 
 ]

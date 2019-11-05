@@ -28,27 +28,27 @@
                       </div>
                       </div>
                     </div>
-                      <form method="POST" id="form">{% csrf_token %}
+                      <form method="POST" id="form1">{% csrf_token%}
                           <div class="row" id="cont">
                               <div class="col-sm-6">
-                                  <label for="validationTooltip01" class="active">*Nombre:</label>
-                                  <input name="name" id="id_name" type="text" class="form-control cuadros cuadros letra" placeholder="Ingrese su Nombre Aquí" maxlength="30" pattern="[A-Za-z]+" required>
-                                  <label for="em1" class="active">*Apellido:</label>
-                                  <input name="lastname" id="id_lastname" type="text" class="form-control cuadros" placeholder="Ingrese su Apellido Aquí" pattern="[A-Za-z]+" required>
-                                  <label for="em1" class="active">*E-mail:</label>
-                                  <input name="email" id="id_email" type="email" class="form-control cuadros cuadros letra" placeholder="Ingrese su E-mail Aquí" required> <span class="icon-down-open"></span>
-                                  <label for="em2" class="active">*Username:</label>
-                                        <input name="username" type="text" class="form-control cuadros" id="id_username" placeholder="Ingrese su contraseña" required>
+                                  <label for="validation01" class="margen2">*Nombre de usuario</label>
+                                  <input type="text" name="username" id="id_username" class="form-control cuadros" placeholder="Ingrese un nombre de usuario" required>
+                                  <label for="validationTooltip01" class="margen2">*Nombre:</label>
+                                  <input type="text" name="name" id="id_name" class="form-control cuadros cuadros letra" placeholder="Ingrese su Nombre Aquí" maxlength="30" pattern="[A-Za-z]+" required>
+                                  <label for="validation01" class="margen2">*Apellido:</label>
+                                  <input type="text" name="lastname" id="id_lastname" class="form-control cuadros" placeholder="Ingrese su Apellido Aquí" pattern="[A-Za-z]+" required>
+                                  <label class="margen3">*Cargar Foto:</label>
+                                      <div class="custom-file ">
+                                          <input type="file" class="custom-file-input" name="image" id="id_image" lang="es">
+                                          <label class="custom-file-label" for="customFileLang">Ejemplo.jpg</label>
+                                      </div>
+                                  
+                                </div>
+                                
 
-                              </div>
-                               {% for message in messages %}
-                                 <div class="alert alert-success">
-                                  <a class="close" href="#" data-dismiss="alert">×  </a>
-                                  {{ message }}
-                                 </div>
-                                {% endfor %}
+                              
                               <div class="col-sm-6">
-                                <label for="em1" class="active">Provincia:</label>
+                                <label class="margen2">Provincia:</label>
                                 <select name="residence" id="id_residence" class="browser-default custom-select" required>
                                   <option value="" selected>Seleccione una provincia</option>
                                   <option value="Chaco">Chaco</option>
@@ -56,26 +56,30 @@
                                   <option value="Formosa">Formosa</option>
                                   <option value="Misiones">Misiones  </option>
                                 </select>
-                                <label for="em1" class="active">Sexo:</label>
-                                <select name='gender'id='id_genero'class="browser-default custom-select" required>
+                                <label class="margen2">Sexo:</label>
+                                <select name="gender" id="id_gender" class="browser-default custom-select" required>
                                   <option value="" selected>Seleccione un sexo</option>
                                   <option value="Femenino">Femenino</option>
                                   <option value="Masculino">Masculino</option>
                                   <option value="Otros">Otros</option>
                                 </select>
                                     <div class="form-group">
-                                        <label for="pass1 " class="active">*Contraseña:</label>
-                                        <input name="password1" type="password" class="form-control cuadros" id="id_password1" placeholder="Ingrese su contraseña" required>
-                                        <label for="pass2 " class="active">*Confirmación de Contraseña:</label>
-                                        <input name="password2" type="password" class="form-control cuadros" id="id_password2" placeholder="Repita su contraseña" required>
+                                        <label for="pass1" class="margen2">*Contraseña:</label>
+                                        <input type="password" class="form-control cuadros" name="password1" id="id_password1" placeholder="Ingrese su contraseña" required>
+                                        <label for="pass2" class="margen2">*Confirmación de Contraseña:</label>
+                                        <input type="password" class="form-control cuadros" name="password2" id="id_password2" placeholder="Repita su contraseña" required>
                                     </div>
 
+                              </div>
+                              <div class="col-sm-12">
+                                  <label for="em1" class="margen0">*E-mail:</label>
+                                  <input type="email" class="form-control cuadros cuadros letra"name="email" id="id_email" placeholder="Ingrese su E-mail Aquí" required> <span class="icon-down-open"></span>
                               </div>
 
                           </div>
                           <div class="row col align-items-end botonera">
                               <div>
-                                <button type="button" class="btn botones col " id="btnsalir">Atras</button>
+                                <button type="button" class="btn botones col " id="btnsalir" href="{% url }">Atras</button>
                               </div>
                               <div>
                                 <button type="submit" class="btn botones col "id="btnsig" href="#">Registrarme</button>
@@ -89,4 +93,5 @@
             </div>
         </div>
     </div>
+
 {%endblock%}

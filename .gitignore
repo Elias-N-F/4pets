@@ -127,3 +127,5 @@ apps/users/migrations/0002_auto_20191027_1607.py
 apps/users/migrations/0003_auto_20191029_2013.py
 apps/users/migrations/0004_customuser_gender.py
 apps/users/migrations/0005_auto_20191030_0313.py
+*.ini
+*.css
