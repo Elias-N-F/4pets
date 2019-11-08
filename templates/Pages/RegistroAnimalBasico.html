@@ -18,13 +18,13 @@
                       </div>
                       </div>
                     </div>
-                      <form method="POST" onsubmit=" return validar();">{%csrf_token%}
+                      <form method="POST" onsubmit=" return validar();" enctype='multipart/form-data'>{%csrf_token%}
                           <div class="row" id="cont">
                               <div class="col-sm-6">
                                   <label for="validationTooltip01" class="col-form-label">*Nombre Completo </label>
-                                  <input type="text" class="form-control" placeholder="Nombre de la mascota" maxlength="20" name= "nombre"id="id_nombre" pattern="[A-Za-z]+" title="Solo letras. Tamaño maximo: 20" required>
+                                  <input type="text" name= "nombre" id="id_nombre" class="form-control" placeholder="Nombre de la mascota" maxlength="30" pattern="[A-Za-z]+" title="Solo letras. Tamaño maximo: 20" required>
                                   <label for="validationTooltip01" class="col-form-label" >Responde al nombre </label>
-                                  <input type="text" name= "nom_opcional"id="id_nom_opcional"class="form-control" placeholder="Responde a …" maxlength="20" pattern="[A-Za-z]+">
+                                  <input type="text" name= "nomb_opcional"id="id_nomb_opcional"class="form-control" placeholder="Responde a …" maxlength="20" pattern="[A-Za-z]+">
 
                                 <label for="validationTooltip01" class="col-form-label">*Especie:</label>
                                 <select name= "especie"id="id_especie"class="browser-default custom-select" required >
@@ -34,7 +34,7 @@
                                   <option value="Otros">Otros</option>
                                 </select>
                             <label for="validationTooltip01" class="col-form-label">*Sexo:</label>
-                                <select name="sexo" id="id_sexo"class="custom-control custom-radio" required >
+                                <select name="sexo" id="id_sexo"class="browser-default custom-select" required >
                                   <option selected value="">Seleccione una sexo</option>
                                   <option value="Otro">Dezconozco</option>
                                   <option value="Macho">Macho</option>
@@ -58,9 +58,9 @@
 
 
                                 <div id="col2">
-                                  <label for="em2" class="col-form-label" id="Cargadeimg">Cargar Foto:</label>
-                                  <div class="custom-file">
-                                      <input type="file" class="custom-file-input" name= "imagen"id="id_imagen"lang="es">
+                                  <label for="em2" class="col-form-label">Cargar Foto:</label>
+                                  <div class="custom-file" for="id_imagen">
+                                      <input type="file" class="custom-file-input" name= "imagen"id="id_imagen" accept="image/*">
                                       <label class="custom-file-label" for="customFileLang">Ejemplo.jpg</label>
                                     </div>
                                   </div>

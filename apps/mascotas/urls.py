@@ -4,14 +4,11 @@ from . import views
 app_name = "mascotas"
 
 urlpatterns = [
-	path("listar/", views.VerMascotas.as_view(), name="listMascota"),
+	path("nuevo/", views.RegistrarMascota.as_view(), name="nuevo"), 
 
-	path("detalle/<int:pk>", views.DetallesMascota.as_view(), name="detailMascota"),
-	
-	path("nuevo/", views.RegistrarMascota.as_view(), name="newMascota"), 
+	path("nuevo2/<slug:slug>", views.RegistrarParte2.as_view(),name="agregarinfomedica"), 
 
-	#path("nuevo2/<object:form>", views.RegistrarParte2, name="newMascota"), 
+	path("confirmar/<slug:slug>", views.ConfirmarMascota.as_view(), name="confirmar"),
 
-	path("modificar/", views.ActualizarMascota.as_view(), name="updateMascota")
 
 ]
