@@ -56,7 +56,7 @@ class RegistrarParte2(UpdateView):
 class ConfirmarMascota(LoginRequiredMixin, DeleteView):
 	model=Mascota
 	template_name='pages/RegistroAnimalConfirmacion.html'
-	success_url=reverse_lazy('mascotas:nuevo')
+	success_url=reverse_lazy('mascotas:mismascotas')
 	def get_object(self, queryset=None):
 		obj = super(ConfirmarMascota, self).get_object()
 		if not obj.usuario == self.request.user:
@@ -67,17 +67,22 @@ class ConfirmarMascota(LoginRequiredMixin, DeleteView):
 		context=Mascota.objects.filter(slug=x)
 		return context
 
-class VerMascotas(LoginRequiredMixin,ListView):
+class MisMascotas(LoginRequiredMixin,ListView):
 	model = Mascota
-	#template_name =
+	template_name ='pages/MisMascotas.html'
 	def get_queryset(self):
-		user= request.user
-		context=Mascota.objects.filter(usuario_id=user)
-		return context
+		request=self.request
+		user= request.user.pk
+		queryset=Mascota.objects.filter(usuario_id=user)
+		return queryset
 
 class DetallesMascota(LoginRequiredMixin, DetailView):
 	model = Mascota
-	#template_name = 
+	template_name ='Pages/PerfilMascota.html'
+	def get_queryset(self):
+		this= self.kwargs['slug']
+		queryset=Mascota.objects.filter(slug=this)
+		return queryset
 
 class ActualizarMascota(LoginRequiredMixin, UpdateView):
 	model = Mascota

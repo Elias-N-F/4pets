@@ -1,6 +1,11 @@
 {%extends 'base.html'%}
-      {%block content%}
       {%load static%}
+{%block css%}
+    <link href="{%static 'Css/RegistroAnimalBasico.css'%}" rel="stylesheet" media="all">
+    <link href="{%static 'Css/RegistroAnimalConfirmacion.css'%}" rel="stylesheet" >
+{%endblock%}
+      {%block content%}
+
 
 <!-- CONTENIDO -->
     <div class="page-wrapper bg-red p-t-180 p-b-100 font-robo">
@@ -36,9 +41,9 @@
                         <img src="{% static "/Img/macho.png"%}" alt="" id="imgSexo">
                         <p id="textoSexo">{{object.sexo}}</p>
                       </div>
-                      <div class="col-sm-2">
+                      <div class="col-sm-3">
                         <p id="edadtexto">Fecha de nacimiento:</p>
-                        <h2 id="edad">{{object.fec_nac}}</h2>
+                        <h4 id="edad">{{object.fec_nac}}</h4>
                       </div>
                       <div class="col-sm-4" id="vet">
                         <h4>Veterinario:</h4>
@@ -46,7 +51,7 @@
                         <p>{{object.nom_vet}}</p>
                         <p>{{object.dir_vet}}</p>
                       </div>
-                      <div class="col-sm-4"id="idtitulo">
+                      <div class="col-sm-3"id="idtitulo">
                         <h5 >El numero ID de su mascota es:</h5>
                         <strong>{{object.pk}}</strong>
                       </div>
@@ -59,9 +64,9 @@
                       </div>
                       <div class="row col align-items-end botonera">
                           <div><form method="POST">{%csrf_token%}
-                            <button type="submit" class="btn botones col" value="Confirm">Cancelar registro</button></form>
+                            <button type="submit" class="btn botones col  waves-effect waves-light" id="btnsalir">Salir</button></form>
                           </div>
-                          <div><form method="GET" action="{% url 'mascotas:nuevo'%}">
+                          <div><form method="GET" action="{% url 'mascotas:mismascotas'%}">
                             <button type="submit" class="btn botones col "id="btnsig">Confirmar</button></form>
                           </div>
 

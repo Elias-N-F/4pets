@@ -1,6 +1,13 @@
 {%extends 'base.html'%}
-      {%block content%}
       {%load static%}
+{%block css%}
+    <link href="{%static 'Css/RegistroAnimalBasico.css'%}" rel="stylesheet" media="all">
+    <link href="{%static 'Css/style.css%'}" rel="stylesheet">
+    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+{%endblock %}
+      {%block content%}
+
     
         <!-- CONTENIDO -->
     <div class="page-wrapper bg-red p-t-180 font-robo" id="content">
@@ -12,7 +19,7 @@
                       </div>
                       <div class="centrar">
                       <div class="media" >
-                        <img class="centrarimg" src="{%static "/Img/huellastitulo.png"%}" width="37" height="42" class="rounded" alt="Cinque Terre">
+                        <img class="centrarimg" src="{%static '/Img/huellastitulo.png'%}" width="37" height="42" class="rounded" alt="Cinque Terre">
                       <div class="media-body centrar">
                         <h1 id="h1">¡Registra tu mascota!</h1>
                       </div>
