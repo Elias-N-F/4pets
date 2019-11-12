@@ -2,9 +2,14 @@
 {%load static%}
 {%block css%}
 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/css/mdb.min.css" rel="stylesheet">
+    <link href="{%static '/Css/HomePage.css'%}" rel="stylesheet" media="all" />
+
+    <!-- FUENTES -->
     <link href="https://fonts.googleapis.com/css?family=Acme|Fjalla+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Asap|Fira+Sans|IBM+Plex+Sans|Maven+Pro|Nanum+Gothic|Nunito|Nunito+Sans|Open+Sans|Overpass|Ropa+Sans|Source+Sans+Pro&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oswald:700|Patua+One|Roboto+Condensed:700" rel="stylesheet">
+
 {%endblock%}
 
 {%block content%}
@@ -44,7 +49,7 @@
           <div class="view">
             <img
               class="d-block w-100"
-              src="{%static '/Img/erizo1.jpg'%}"
+              src="{% static '/Img/erizo1.jpg'%}"
               alt="Second slide"
             />
             <div class="mask rgba-black-light"></div>
@@ -59,7 +64,7 @@
           <div class="view">
             <img
               class="d-block w-100"
-              src="{% static '/Img/gato1.jpg'%}"
+              src="{%static '/Img/gato1.jpg'%}"
               alt="Third slide"
             />
             <div class="mask rgba-black-light"></div>
