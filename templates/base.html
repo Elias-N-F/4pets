@@ -66,10 +66,12 @@
             </li>
           </ul>
           {%if user.is_authenticated%}
-          <a text-align="left" class="nav-link"  href="#">Buenas, {{user}}</a>
+          <a text-align="left" class="nav-link"  href="{%url 'logout'%}">Buenas, {{user}}</a>
           {%else%}
-          <a text-align="left" class="nav-link"  href="#">Inicio Sesion</a>
-          <button type="button" class="btn btn-primary">Registrame</button>
+          <a text-align="left" class="nav-link"  href="{%url 'login'%}">Inicio Sesion</a>
+          <form method="GET" action="{%url 'users:nuevouser'%}">
+          <button type="submit" class="btn btn-primary">Registrame</button>
+          </form>
           {%endif%}
         </div>
     </nav>

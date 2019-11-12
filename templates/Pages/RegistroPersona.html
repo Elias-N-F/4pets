@@ -1,7 +1,15 @@
 {%extends 'base.html'%}
-      {%block content%}
-      {%load static%}
-    
+{%load static%}
+{%block css%}
+
+    <!-- Main CSS-->
+    <link href="{%static '/Css/RegistroPersona.css'%}" rel="stylesheet" media="all">
+
+
+    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+{%endblock%}    
+    {%block content%}
     <!-- BREADCRUMB -->
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb" style="margin:0px">
