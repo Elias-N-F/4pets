@@ -51,7 +51,10 @@ class RegistrarParte2(UpdateView):
 		self.object = form.save()
 		x=self.kwargs['slug']
 		return HttpResponseRedirect(reverse_lazy('mascotas:confirmar',kwargs={'slug':x}))
-
+	def form_invalid(self,form):
+		response= HttpResponse("Algo pasó")
+		response.write("<div>Intente de nuevo haciendo clic <a href=''>aquí</a></div>")
+		return response
 
 class ConfirmarMascota(LoginRequiredMixin, DeleteView):
 	model=Mascota
