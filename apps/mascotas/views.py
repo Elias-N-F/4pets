@@ -4,7 +4,7 @@ from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin
-from .models import Mascota
+from .models import Mascota, Perdidos
 from django.utils.text import slugify
 from django.http import HttpResponse, HttpResponseRedirect, Http404
 
@@ -37,6 +37,31 @@ class RegistrarMascota(LoginRequiredMixin, CreateView):
 		response.write("<div>Intente de nuevo haciendo clic <a href=''>aquí</a></div>")
 		response.write("<div>Tal vez esta mascota ya existe?</div>")
 		return response
+
+class MascotaPerdida(LoginRequiredMixin, CreateView):
+	model= Perdidos
+	fields=('a','b','c','d')
+	template_name=
+
+	def post(self, request, *args, **kwargs):
+		form = self.get_form()
+		request.POST._mutable=True
+		x=kwargs['id']
+		form.data['mascota']=x
+		if form.is_valid():
+			return self.form_valid(form)
+		else:
+			return self.form_invalid(form)
+
+	def form_valid(self, form,kwargs):
+		self.object = form.save()
+		return HttpResponseRedirect(reverse_lazy('mascotas:mismascotas'))
+	
+	def form_invalid(self,form):
+		response= HttpResponse("Algo salió mal, bastante mal diria yo")
+		response.write("<div>Intente de nuevo haciendo clic <a href=''>aquí</a></div>")
+		return response
+
 
 class RegistrarParte2(UpdateView):
 	model = Mascota
@@ -78,6 +103,7 @@ class MisMascotas(LoginRequiredMixin,ListView):
 		user= request.user.pk
 		queryset=Mascota.objects.filter(usuario_id=user)
 		return queryset
+
 
 class DetallesMascota(LoginRequiredMixin, DetailView):
 	model = Mascota
