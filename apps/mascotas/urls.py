@@ -14,5 +14,5 @@ urlpatterns = [
 
 	path("detalle/<slug:slug>", views.DetallesMascota.as_view(), name="detalle"),
 
-	path("perdida/<int:id>", views.MascotaPerdida.as_view(), name="perdida"),
+	path("perdida/<slug:slug>", views.MascotaPerdida.as_view(), name="perdida"),
 ]

@@ -40,20 +40,30 @@ class RegistrarMascota(LoginRequiredMixin, CreateView):
 
 class MascotaPerdida(LoginRequiredMixin, CreateView):
 	model= Perdidos
-	fields=('a','b','c','d')
-	template_name=
+	fields=('mascota','a','b','c','d','e')
+	template_name='pages/testing.html'
+
+
 
 	def post(self, request, *args, **kwargs):
 		form = self.get_form()
 		request.POST._mutable=True
-		x=kwargs['id']
-		form.data['mascota']=x
+		x=kwargs['slug']
+		r=Mascota.objects.filter(slug=x)
+		form.data['mascota']=r[0].id
+		form.data['e']=True
 		if form.is_valid():
 			return self.form_valid(form)
 		else:
+			print(form.cleaned_data['a'])
+
+			print(form.cleaned_data['c'])
+			print(form.cleaned_data['d'])
+			print(form.cleaned_data['e'])
+
 			return self.form_invalid(form)
 
-	def form_valid(self, form,kwargs):
+	def form_valid(self, form):
 		self.object = form.save()
 		return HttpResponseRedirect(reverse_lazy('mascotas:mismascotas'))
 	
@@ -63,7 +73,7 @@ class MascotaPerdida(LoginRequiredMixin, CreateView):
 		return response
 
 
-class RegistrarParte2(UpdateView):
+class RegistrarParte2(LoginRequiredMixin, UpdateView):
 	model = Mascota
 	template_name='pages/RegistroAnimalDetallado.html'
 	fields=('info_medica','nom_doc','nom_vet','dir_vet','tel_vet','cp_vet','ciudad_vet','detalles_vet')
@@ -71,7 +81,11 @@ class RegistrarParte2(UpdateView):
 		x=self.kwargs['slug']
 		context=Mascota.objects.filter(slug=x)
 		return context
-
+	def get_object(self, queryset=None):
+		obj = super(RegistrarParte2, self).get_object()
+		if not obj.usuario == self.request.user:
+			raise Http404
+		return obj
 	def form_valid(self, form):
 		self.object = form.save()
 		x=self.kwargs['slug']
