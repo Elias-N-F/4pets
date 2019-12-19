@@ -41,7 +41,7 @@ class RegistrarMascota(LoginRequiredMixin, CreateView):
 class MascotaPerdida(LoginRequiredMixin, CreateView):
 	model= Perdidos
 	fields=('mascota','a','b','c','d','e')
-	template_name='pages/testing.html'
+	template_name='pages/DatosMascotaPerdida.html'
 
 
 

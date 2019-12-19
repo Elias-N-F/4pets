@@ -14,13 +14,12 @@
         {%if object_list%}
 {% for p in object_list %}
 
-
         <div class="card" id="">
         <img src="{{p.imagen.url}}" class="card-img-top">
         <div class='card-body'>
         <h5 class='card-title'>{{p.nombre}}</h5>
         <h6 class='card-subtitle'>{{p.especie}}-{{p.raza}}</h6>
-        <a href='#' class='btn text-white btnCard'>Me perdi!</a>
+        <a href="{%url 'mascotas:perdida' p.slug%}" class='btn text-white btnCard'>Me perdí!</a>
         <a href="{%url 'mascotas:detalle' p.slug%}" class='btn text-white btnCard'>Información</a>
         </div>
         </div>
